@@ -1,9 +1,16 @@
 import React from 'react';
+import Sisalto from './Sisalto'
+import Otsikko from './Otsikko'
 
 
 const Kurssi = ({ kurssi }) => {
+  console.log('Kurssi, kurssi ',kurssi)
     return (
-      <li>{kurssi.nimi}</li>
+    
+      <div><Otsikko otsikko={kurssi.nimi} />
+      
+      <Sisalto osat={kurssi.osat}/>
+      </div>
     )
 }
 
