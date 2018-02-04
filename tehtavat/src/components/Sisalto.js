@@ -6,9 +6,12 @@ const Sisalto = ({ osat }) => {
   const summa = osat.reduce((sum,osa) => sum + osa.tehtavia,0)
   console.log('summa ',summa)
     return (
+      <div>
       <ul>   
       {osat.map(osa => <Osa key={osa.id} osa={osa}/>)}
       </ul>
+      <p>Yhteensä {summa} tehtävää</p>
+      </div>
 
     )
 }
